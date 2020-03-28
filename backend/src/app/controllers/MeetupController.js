@@ -106,6 +106,10 @@ class MeetupController {
         return res.status(401).json({ error: 'Not authorized.' });
       }
 
+      if (meetup.past) {
+        return res.status(400).json({ error: "Can't delete past meetups." });
+      }
+
       await meetup.destroy();
 
       return res.send();
