@@ -3,11 +3,20 @@ import Subscription from '../models/Subscription';
 import User from '../models/User';
 import Meetup from '../models/Meetup';
 
+import Mail from '../../lib/Mail';
+
 class SubscriptionController {
   async store(req, res) {
     try {
       const user = await User.findByPk(req.userId);
-      const meetup = await Meetup.findByPk(req.params.id);
+      const meetup = await Meetup.findByPk(req.params.id, {
+        include: [
+          {
+            model: User,
+            as: 'organizer',
+          },
+        ],
+      });
 
       if (meetup.user_id === req.userId) {
         return res
@@ -45,6 +54,12 @@ class SubscriptionController {
       const subscribe = await Subscription.create({
         user_id: user.id,
         meetup_id: meetup.id,
+      });
+
+      await Mail.sendMail({
+        to: `${meetup.organizer.name} <${meetup.organizer.email}>`,
+        subject: 'Nova inscrição',
+        text: 'Você tem um novo inscrito',
       });
 
       return res.json(subscribe);
