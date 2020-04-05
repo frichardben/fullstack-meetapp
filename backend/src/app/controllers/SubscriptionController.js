@@ -3,7 +3,8 @@ import Subscription from '../models/Subscription';
 import User from '../models/User';
 import Meetup from '../models/Meetup';
 
-import Mail from '../../lib/Mail';
+import Queue from '../../lib/Queue';
+import SubscriptionMail from '../jobs/SubscriptionMail';
 
 class SubscriptionController {
   async store(req, res) {
@@ -56,16 +57,9 @@ class SubscriptionController {
         meetup_id: meetup.id,
       });
 
-      await Mail.sendMail({
-        to: `${meetup.organizer.name} <${meetup.organizer.email}>`,
-        subject: 'Nova inscrição',
-        template: 'subscription',
-        context: {
-          organizer: meetup.organizer.name,
-          meetup: meetup.title,
-          user: user.name,
-          email: user.email,
-        },
+      await Queue.add(SubscriptionMail.key, {
+        meetup,
+        user,
       });
 
       return res.json(subscribe);
