@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img style="background: linear-gradient(180deg, #22202C 0%, #402845 100%); padding: 20px; border-radius: 10px;"alt="Meetapp" width="130px" title="Meetapp" src=".github/logo.svg" />
+  <img alt="Meetapp" width="130px" title="Meetapp" src=".github/logo.svg" />
 </h1>
 
 <p align="center">
@@ -11,10 +11,6 @@
 </p>
 
 <p align="center">
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Meetapp&uri=https%3A%2F%2Fraw.githubusercontent.com%2Ffrichardben%2Ffullstack-meetapp%2Fmaster%2Fbackend%2Finsomnia.json)
-</p>
-
-<p align="center">
 
 <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/frichardben/fullstack-meetapp">
 
@@ -23,6 +19,10 @@
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/frichardben/fullstack-meetapp">
 
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/frichardben/fullstack-meetapp">
+</p>
+
+<p align="center">
+<a href="https://insomnia.rest/run/?label=Meetapp&uri=https%3A%2F%2Fraw.githubusercontent.com%2Ffrichardben%2Ffullstack-meetapp%2Fmaster%2Fbackend%2Finsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 </p>
 
 ## :rocket: Overview
@@ -57,7 +57,7 @@ To do so, you will need to run the following commands:
 
 _Remember: If you restart your machine, you will need to start again the server with `docker start <container_id>`._
 
-###  Installing
+### :anchor: Installing
 
 ```
 $ git clone https://github.com/frichardben/fullstack-meetapp.git
