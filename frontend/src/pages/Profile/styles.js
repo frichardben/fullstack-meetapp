@@ -48,8 +48,7 @@ export const Container = styled.div`
       color: #fff;
       border: 0;
       border-radius: 4px;
-      min-width: 150px;
-      padding: 0 10px;
+      padding: 0 15px;
       align-self: flex-end;
       font-size: 16px;
       transition: background 0.2s;
