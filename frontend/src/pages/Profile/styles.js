@@ -43,7 +43,7 @@ export const Container = styled.div`
       align-items: center;
       margin: 5px 0 0;
       height: 44px;
-      background-color: #f64c75;
+      background-color: #d44059;
       font-weight: bold;
       color: #fff;
       border: 0;
@@ -55,7 +55,7 @@ export const Container = styled.div`
       transition: background 0.2s;
 
       &:hover {
-        background-color: ${darken(0.03, '#f64c75')};
+        background-color: ${darken(0.08, '#d44059')};
       }
     }
   }
