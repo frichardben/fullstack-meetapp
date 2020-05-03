@@ -38,6 +38,12 @@ export const Container = styled.div`
     color: #fff;
     margin-right: 20px;
   }
+
+  .btn-edit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   .btn-cancel {
     background-color: #d44059;
     color: #fff;
