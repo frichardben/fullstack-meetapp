@@ -2,8 +2,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Wrapper = styled.div`
-  height: 100%;
-  background-image: linear-gradient(-90deg, #22202c, #402845);
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
