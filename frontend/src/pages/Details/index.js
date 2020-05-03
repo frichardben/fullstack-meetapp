@@ -38,7 +38,6 @@ export default function Details({ match }) {
       await api.delete(`/meetups/${id}`);
       toast.info('Meetup cancelado');
       history.push('/dashboard');
-
     } catch (error) {
       const pastDate = error.response.data;
       toast.error(
@@ -46,9 +45,7 @@ export default function Details({ match }) {
           ? `Error cancel: ${pastDate.error}`
           : 'Error cancel meetup, try again'
       );
-
     }
-
   }
 
   return (
