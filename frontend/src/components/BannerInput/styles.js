@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 10px;
 
   label {
     cursor: pointer;
@@ -18,9 +17,14 @@ export const Container = styled.div`
       opacity: 0.7;
     }
 
+    div {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
     strong {
-      position: absolute;
-      margin-top: 50px;
+      margin-top: 20px;
       font-size: 20px;
       color: #999;
     }
@@ -35,17 +39,6 @@ export const Container = styled.div`
 
     input {
       display: none;
-    }
-
-    div {
-      position: absolute;
-      width: 100%;
-      height: 60%;
-      top: 0;
-      left: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
   }
 `;

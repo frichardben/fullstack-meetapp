@@ -17,7 +17,7 @@ export default function BannerInput() {
   useEffect(() => {
     if (ref.current) {
       registerField({
-        name: 'banner_id',
+        name: 'file_id',
         ref: ref.current,
         path: 'dataset.file',
       });
@@ -40,22 +40,20 @@ export default function BannerInput() {
   return (
     <Container>
       <label htmlFor="banner">
-        {!preview && (
-          <div>
-            <MdAddAPhoto size={48} color="#999" />
-          </div>
-        )}
-        {!preview && <strong>Selecionar imagem</strong>}
-        <img src={preview} alt="" />
+        <div>
+          {!preview && <MdAddAPhoto size={48} color="#999" />}
+          {!preview && <strong>Selecionar imagem</strong>}
+          <img src={preview} alt="" />
 
-        <input
-          type="file"
-          id="banner"
-          accept="image/*"
-          data-file={file}
-          onChange={handleChange}
-          ref={ref}
-        />
+          <input
+            type="file"
+            id="banner"
+            accept="image/*"
+            data-file={file}
+            onChange={handleChange}
+            ref={ref}
+          />
+        </div>
       </label>
     </Container>
   );

@@ -35,6 +35,7 @@ export default function DatePicker({ name, placeholder }) {
         showTimeSelect
         timeFormat="HH:mm"
         dateFormat="dd/MM/yyyy - HH:mm"
+        ref={ref}
         autoComplete="off"
         locale={pt}
         placeholderText={placeholder}
