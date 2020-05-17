@@ -41,6 +41,7 @@ This project is part of my personal portfolio, so I would be happy to give me so
 - Meetup management
 - Meetup registration
 - Listing of Meetups
+- Sending email
 
 
 ## :computer: Getting Started
@@ -51,11 +52,13 @@ To run this server you will need two containers running on your machine.
 
 To do so, you will need to run the following commands:
 
-- `docker run --name some-postgres -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres`;
+- `docker run --name some-postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres`;
 - `docker run --name redis -p 6379:6379 -d -t redis:alpine`;
 
 
 _Remember: If you restart your machine, you will need to start again the server with `docker start <container_id>`._
+
+Set the environment variables in a `.env` file as exemplified in the `.env.example`
 
 ### :anchor: Installing
 
@@ -70,11 +73,18 @@ $ cd backend
 $ yarn install
 
 # Run migrations to your database
-$ yarn migrate
+$ yarn sequelize db:migrate
 
 # Run the backend server
 $ yarn dev
 $ yarn queue
+
+# Install dependencies for the frontend 
+$ cd frontend
+$ yarn install
+
+# Run the frontend server
+$ yarn start
 ```
 
 ## :memo: License
