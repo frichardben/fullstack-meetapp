@@ -44,8 +44,8 @@ export default function New() {
       const errData = error.response.data;
       toast.error(
         errData && errData.error
-          ? `Error creating meetup: ${errData.error}`
-          : 'Error creating meetup, try again'
+          ? `Erro ao criar o meetup: ${errData.error}`
+          : 'Erro ao criar o meetup, tente novamente.'
       );
     }
   }

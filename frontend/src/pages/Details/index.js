@@ -53,7 +53,7 @@ export default function Details({ match }) {
       <header>
         <h1>{meetup.title}</h1>
         <div>
-          <Link to={`/details/${id}/edit`}>
+          <Link to={`/meetups/${id}/edit`}>
             <button
               className="btn btn-edit"
               type="button"

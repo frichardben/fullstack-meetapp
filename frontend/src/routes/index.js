@@ -22,7 +22,7 @@ export default function Routes() {
 
       <Route path="/new" component={New} isPrivate />
       <Route path="/details/:id" component={Details} isPrivate />
-      <Route path="/details/:id/edit" component={Edit} isPrivate />
+      <Route path="/meetups/:id/edit" component={Edit} isPrivate />
     </Switch>
   );
 }
