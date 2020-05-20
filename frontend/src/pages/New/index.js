@@ -20,9 +20,17 @@ const schema = Yup.object().shape({
 });
 
 export default function New() {
-  async function handleSubmit({ title, description, location, date, file_id }) {
+  async function handleSubmit({
+    user_id,
+    title,
+    description,
+    location,
+    date,
+    file_id,
+  }) {
     try {
       await api.post('meetups', {
+        user_id,
         title,
         description,
         location,
@@ -47,13 +55,9 @@ export default function New() {
       <Form schema={schema} onSubmit={handleSubmit}>
         <BannerInput name="file_id" />
         <Input name="title" placeholder="Título do meetup" />
-        <Input
-          name="description"
-          placeholder="Descrição do completa"
-          multiline
-        />
+        <Input name="description" placeholder="Descrição completa" multiline />
         <DatePicker name="date" placeholder="Data do meetup" />
-        <Input name="location" placeholder="Locatização " />
+        <Input name="location" placeholder="Localização " />
         <button className="btn" type="submit">
           <MdAddCircleOutline
             color="#fff"

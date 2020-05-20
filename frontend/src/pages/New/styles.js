@@ -46,25 +46,24 @@ export const Container = styled.div`
       background-color: rgba(255, 255, 255, 0.2);
       margin: 10px 0 20px;
     }
-    }
-    .btn {
-      display: flex;
-      align-items: center;
-      margin: 5px 0 0;
-      height: 44px;
-      background-color: #d44059;
-      font-weight: bold;
-      color: #fff;
-      border: 0;
-      border-radius: 4px;
-      padding: 0 15px;
-      align-self: flex-end;
-      font-size: 16px;
-      transition: background 0.2s;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    margin: 5px 0 0;
+    height: 44px;
+    background-color: #d44059;
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 0 15px;
+    align-self: flex-end;
+    font-size: 16px;
+    transition: background 0.2s;
 
-      &:hover {
-        background-color: ${darken(0.08, '#d44059')};
-      }
+    &:hover {
+      background-color: ${darken(0.08, '#d44059')};
     }
   }
 `;
